@@ -1,20 +1,20 @@
 ## Correzione Umidità e Analisi dei Dati di Particolato Atmosferico
 
-###Descrizione del Progetto
+### Descrizione del Progetto
 
 Questo progetto si occupa della lettura, manipolazione e analisi di un dataset contenente misurazioni di PM10 e PM2.5, con l'obiettivo di correggere i valori in base all'umidità utilizzando vari algoritmi di correzione (Chakrabarti, Crilley, e di Antonio). Viene inoltre generato un report visivo e un file Excel contenente le medie giornaliere delle concentrazioni di particolato atmosferico.
 
-###Struttura del Progetto
+### Struttura del Progetto
 
-##1. Lettura del Dataset
+## 1. Lettura del Dataset
 
 Il file CSV è letto utilizzando pandas. Il dataset contiene colonne per data, ora, umidità relativa (hum), e concentrazioni di PM10 e PM2.5.
 
-##2. Unione delle Colonne Data e Ora
+## 2. Unione delle Colonne Data e Ora
 
 Le colonne date e time vengono unite per creare una colonna datetime che rappresenta il timestamp completo per ogni misurazione.
 
-##3. Correzione Umidità
+## 3. Correzione Umidità
 
 Sono definite cinque funzioni per correggere le concentrazioni di PM10 e PM2.5 in base all'umidità relativa:
 
@@ -30,16 +30,16 @@ Sono definite cinque funzioni per correggere le concentrazioni di PM10 e PM2.5 i
 
 Queste funzioni applicano formule specifiche per correggere i valori di particolato basandosi sull'umidità.
 
-##4. Visualizzazione dei Risultati
+## 4. Visualizzazione dei Risultati
 
 Utilizzando plotly, vengono creati grafici per confrontare i valori originali e corretti di PM10 e PM2.5. I grafici mostrano le differenze tra i dati non corretti e quelli corretti usando i diversi algoritmi di correzione.
 
-##5. Esportazione dei Risultati
+## 5. Esportazione dei Risultati
 
 Le medie giornaliere delle concentrazioni di PM10 e PM2.5 (sia originali che corretti) vengono calcolate e esportate in un file Excel denominato giornalieri_UMIDITà_Ortles2N_2022_2023.xlsx.
 
 
-Note
+### Note
 
 Assicurarsi che i valori di umidità non superino il 100%. Nel caso in cui ciò accada, i valori vengono corretti a 99.9%.
 
